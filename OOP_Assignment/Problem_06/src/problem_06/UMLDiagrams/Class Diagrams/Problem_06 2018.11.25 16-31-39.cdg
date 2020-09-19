@@ -1,0 +1,140 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<ClassDiagram name="Problem_06">
+  <ClassDiagramComponents>
+    <Class name="Employee" package="problem_06" visibility="public" xPosition="9.0" yPosition="389.0">
+      <Fields>
+        <Field name="employeeOffice" type="int" visibility="protected"/>
+        <Field name="employeeSalary" type="double" visibility="protected"/>
+        <Field name="dateHired" type="Date" visibility="protected"/>
+      </Fields>
+      <Constructors>
+        <Constructor visibility="package"/>
+        <Constructor visibility="package">
+          <Argument type="String" name="name"/>
+          <Argument type="String" name="address"/>
+          <Argument type="String" name="phoneNumber"/>
+          <Argument type="String" name="emailAddress"/>
+          <Argument type="int" name="employeeOffice"/>
+          <Argument type="double" name="employeeSalary"/>
+          <Argument type="Date" name="dateHired"/>
+        </Constructor>
+      </Constructors>
+      <Methods>
+        <Method name="setEmployeeOffice" returnType="void" visibility="public"/>
+        <Method name="getEmployeeOffice" returnType="int" visibility="public"/>
+        <Method name="setEmployeeSalary" returnType="void" visibility="public"/>
+        <Method name="getEmployeeSalary" returnType="double" visibility="public"/>
+        <Method name="setDate" returnType="void" visibility="public"/>
+        <Method name="getDate" returnType="Date" visibility="public"/>
+        <Method name="toString" returnType="String" visibility="public"/>
+      </Methods>
+    </Class>
+    <Class name="Faculty" package="problem_06" visibility="public" xPosition="801.0" yPosition="631.0">
+      <Fields>
+        <Field name="facultyOfficeHour" type="String" visibility="private"/>
+        <Field name="facultyRank" type="String" visibility="private"/>
+      </Fields>
+      <Constructors>
+        <Constructor visibility="package"/>
+        <Constructor visibility="package">
+          <Argument type="String" name="name"/>
+          <Argument type="String" name="address"/>
+          <Argument type="String" name="phoneNumber"/>
+          <Argument type="String" name="emailAddress"/>
+          <Argument type="int" name="employeeOffice"/>
+          <Argument type="double" name="employeeSalary"/>
+          <Argument type="Date" name="dateHired"/>
+          <Argument type="String" name="facultyOfficeHour"/>
+          <Argument type="String" name="facultyRank"/>
+        </Constructor>
+      </Constructors>
+      <Methods>
+        <Method name="getFacultyOfficeHour" returnType="String" visibility="public"/>
+        <Method name="getFacultyRank" returnType="String" visibility="public"/>
+        <Method name="toString" returnType="String" visibility="public"/>
+      </Methods>
+    </Class>
+    <Class name="Person" package="problem_06" visibility="public" xPosition="9.0" yPosition="-1.0">
+      <Fields>
+        <Field name="name" type="String" visibility="protected"/>
+        <Field name="address" type="String" visibility="protected"/>
+        <Field name="phoneNumber" type="String" visibility="protected"/>
+        <Field name="emailAddress" type="String" visibility="protected"/>
+      </Fields>
+      <Constructors>
+        <Constructor visibility="package"/>
+        <Constructor visibility="package">
+          <Argument type="String" name="name"/>
+          <Argument type="String" name="address"/>
+          <Argument type="String" name="phoneNumber"/>
+          <Argument type="String" name="emailAddress"/>
+        </Constructor>
+      </Constructors>
+      <Methods>
+        <Method name="setName" returnType="void" visibility="public"/>
+        <Method name="getName" returnType="String" visibility="public"/>
+        <Method name="setAddress" returnType="void" visibility="public"/>
+        <Method name="getAddress" returnType="String" visibility="public"/>
+        <Method name="setPhoneNumber" returnType="void" visibility="public"/>
+        <Method name="getPhoneNumber" returnType="String" visibility="public"/>
+        <Method name="setEmail" returnType="void" visibility="public"/>
+        <Method name="getEmail" returnType="String" visibility="public"/>
+        <Method name="toString" returnType="String" visibility="public"/>
+      </Methods>
+    </Class>
+    <Class name="Staff" package="problem_06" visibility="public" xPosition="895.0" yPosition="313.0">
+      <Fields>
+        <Field name="staffTitle" type="String" visibility="private"/>
+      </Fields>
+      <Constructors>
+        <Constructor visibility="package"/>
+        <Constructor visibility="package">
+          <Argument type="String" name="name"/>
+          <Argument type="String" name="address"/>
+          <Argument type="String" name="phoneNumber"/>
+          <Argument type="String" name="emailAddress"/>
+          <Argument type="int" name="employeeOffice"/>
+          <Argument type="double" name="employeeSalary"/>
+          <Argument type="Date" name="dateHired"/>
+          <Argument type="String" name="staffTitle"/>
+        </Constructor>
+      </Constructors>
+      <Methods>
+        <Method name="setStaffTitle" returnType="void" visibility="public"/>
+        <Method name="getStaffTitle" returnType="String" visibility="public"/>
+        <Method name="toString" returnType="String" visibility="public"/>
+      </Methods>
+    </Class>
+    <Class name="Student" package="problem_06" visibility="public" xPosition="560.0" yPosition="16.0">
+      <Fields>
+        <Field name="studentStatus" type="String" visibility="private"/>
+        <Field name="freshman" type="String" visibility="public" isStatic="true"/>
+        <Field name="junior" type="String" visibility="public" isStatic="true"/>
+        <Field name="senior" type="String" visibility="public" isStatic="true"/>
+        <Field name="sophomore" type="String" visibility="public" isStatic="true"/>
+      </Fields>
+      <Constructors>
+        <Constructor visibility="package"/>
+        <Constructor visibility="package">
+          <Argument type="String" name="name"/>
+          <Argument type="String" name="address"/>
+          <Argument type="String" name="phoneNumber"/>
+          <Argument type="String" name="emailAddress"/>
+          <Argument type="String" name="studentStatus"/>
+        </Constructor>
+      </Constructors>
+      <Methods>
+        <Method name="setStudentStatus" returnType="void" visibility="public"/>
+        <Method name="getStudentStatus" returnType="String" visibility="public"/>
+        <Method name="toString" returnType="String" visibility="public"/>
+      </Methods>
+    </Class>
+  </ClassDiagramComponents>
+  <ClassDiagramRelations>
+    <IsRelation name="is" source="problem_06.Staff" target="problem_06.Employee"/>
+    <IsRelation name="is" source="problem_06.Employee" target="problem_06.Person"/>
+    <IsRelation name="is" source="problem_06.Student" target="problem_06.Person"/>
+    <IsRelation name="is" source="problem_06.Faculty" target="problem_06.Employee"/>
+  </ClassDiagramRelations>
+</ClassDiagram>
